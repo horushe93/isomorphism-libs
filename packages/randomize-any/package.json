@@ -1,9 +1,16 @@
 {
   "name": "randomize-any",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "author": "horushe",
-  "keywords": ["randomize", "ramdom", "randomization", "cryptographically secure", "weighted random", "TypeScript"],
+  "keywords": [
+    "randomize",
+    "ramdom",
+    "randomization",
+    "cryptographically secure",
+    "weighted random",
+    "TypeScript"
+  ],
   "homepage": "https://github.com/horushe93/isomorphism-libs/tree/master/packages/randomize-any",
   "repository": {
     "type": "git",
