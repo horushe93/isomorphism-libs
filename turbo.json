@@ -1,0 +1,24 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "docs#build:doc:meta": {
+      "outputs": ["dist-api-report/**", "dist-temp-api-report/**"]
+    },
+    "docs#generate": {
+      "dependsOn": ["build:doc:meta"],
+      "inputs": ["packages/*/dist-api-report/*.json"],
+      "outputs": ["apps/docs/docs/api"]
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "inputs": ["src/**/*.ts", "test/**/*.ts"]
+    }
+  },
+  "globalDependencies": [
+    "tsconfig.json"
+  ]
+}

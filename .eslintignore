@@ -1,0 +1,13 @@
+dist/
+dist-api-report/
+dist-temp-api-report/
+
+coverage/
+
+html/
+
+node_modules/
+
+.turbo/
+
+apps/docs/

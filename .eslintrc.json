@@ -1,0 +1,27 @@
+{
+  "extends": ["eslint-config-tencent"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./packages/**/tsconfig.json", "./**/tsconfig.json"]
+      },
+      "extends": ["eslint-config-tencent/ts"],
+      "rules": {
+        "@typescript-eslint/indent": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/no-require-imports": "off",
+        "@typescript-eslint/consistent-type-assertions": "off",
+        "@typescript-eslint/member-ordering": "off"
+      }
+    }
+  ],
+  "rules": {
+    "arrow-parens": "off",
+    "function-paren-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    "newline-per-chained-call": "off",
+    "no-new-func": "off",
+    "no-param-reassign": "off"
+  }
+}

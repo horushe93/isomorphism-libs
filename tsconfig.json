@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "sourceMap": true,
+    // 生成声明文件
+    // "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationMap": true,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "node",
+    "allowJs": true,
+    "checkJs": true,
+    // "strict": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "removeComments": false,
+    "jsx": "preserve",
+    // 默认会查找 node_modules/@types 下的，不需要配置白名单
+    // "types": ["node", "jest"],
+    "rootDir": ".",
+    "paths": {
+      "@/*": ["src/*"]
+      // "@vue/*": ["packages/*/src"],
+      // "vue": ["packages/vue/src"]
+    },
+    "importHelpers": true,
+    "skipLibCheck": true
+  },
+  // "include": [
+  //   // "packages/global.d.ts",
+  //   // "packages/*/src",
+  //   // "packages/*/__tests__"
+  // ]
+  "ts-node": {
+    "scope": true,
+    "scopeDir": "./",
+    "compilerOptions": {
+      "module": "CommonJS",
+      "noUnusedLocals": false,
+    }
+  }
+}

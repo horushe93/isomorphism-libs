@@ -1,0 +1,54 @@
+{
+  "name": "randomize-any",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "vitest run --config ../../vitest.config.ts",
+    "coverage": "pnpm test -- run --coverage",
+    "build": "rimraf ./dist && cross-env DEBUG=randomize-any bany randomize-any"
+  },
+  "main": "index.js",
+  "module": "dist/index.browser.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.browser.esm.mjs",
+      "require": "./index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./legacy": {
+      "import": "./dist/index.browser.esm-legacy.mjs",
+      "require": "./dist/index.browser.cjs-legacy.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "buildOptions": [
+    {
+      "target": "browser",
+      "name": "randomizeAny",
+      "formats": [
+        "cjs",
+        "cjs-legacy",
+        "esm",
+        "esm-legacy",
+        "global",
+        "global-legacy"
+      ]
+    }
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": ["randomize", "ramdom"],
+  "author": "horushe",
+  "license": "MIT",
+  "devDependencies": {
+    "build-any": "workspace:^1.0.0",
+    "rimraf": "^5.0.1"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.18.3",
+    "core-js": "^3"
+  }
+}

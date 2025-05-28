@@ -1,0 +1,91 @@
+{
+  "name": "build-any",
+  "version": "1.0.0",
+  "description": "",
+  "author": "horushe",
+  "homepage": "https://github.com/horushe/build-any#readme",
+  "license": "MIT",
+  "main": "./dist/index.node.cjs.cjs",
+  "module": "./dist/index.node.esm.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.node.esm.mjs",
+      "require": "./dist/index.node.cjs.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "bany": "./cli.js",
+    "banyesm": "./cli-esm.js"
+  },
+  "scripts": {
+    "check": "tsc -p tsconfig.json --noEmit",
+    "smoke-test": "cross-env NODE_ENV=development ts-node -P ./tsconfig.json ./smoke-tests/index.test.ts",
+    "build": "rimraf ./dist && cross-env NODE_ENV=development DEBUG=build-any esno ./src/build.ts build-any",
+    "smktest:astro": "cross-env NODE_ENV=development ts-node -P ./tsconfig.json ./smoke-tests/compile-astro-scripts.test.ts"
+  },
+  "buildOptions": [
+    {
+      "target": "node",
+      "formats": [
+        "cjs",
+        "esm"
+      ]
+    }
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "index.js",
+    "dist",
+    "assets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/horushe/build-any.git"
+  },
+  "bugs": {
+    "url": "https://github.com/horushe/build-any/issues"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/fs-extra": "^11.0.1",
+    "@types/jest": "^29.0.3",
+    "@types/node": "^18.7.18",
+    "jest": "^29.4.1",
+    "rimraf": "^5.0.0",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/plugin-proposal-decorators": "^7.20.13",
+    "@babel/plugin-transform-runtime": "^7.18.2",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.16.7",
+    "@babel/runtime-corejs3": "^7.18.3",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@rollup/plugin-virtual": "^3.0.1",
+    "debug": "^4.3.4",
+    "deepmerge": "^4.3.0",
+    "esbuild": "^0.17.11",
+    "find-node-modules": "^2.1.3",
+    "findup-sync": "^5.0.0",
+    "fs-extra": "^10.1.0",
+    "rollup": "^2.50.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "tsc-alias": "^1.8.5",
+    "typescript": "^4.8.3"
+  }
+}
