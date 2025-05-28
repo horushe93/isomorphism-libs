@@ -2,6 +2,16 @@
   "name": "randomize-any",
   "version": "1.0.0",
   "description": "",
+  "author": "horushe",
+  "keywords": ["randomize", "ramdom"],
+  "homepage": "https://github.com/horushe93/isomorphism-libs/tree/master/packages/randomize-any",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/horushe93/isomorphism-libs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/horushe93/isomorphism-libs/issues"
+  },
   "scripts": {
     "test": "vitest run --config ../../vitest.config.ts",
     "coverage": "pnpm test -- run --coverage",
@@ -40,8 +50,6 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "keywords": ["randomize", "ramdom"],
-  "author": "horushe",
   "license": "MIT",
   "devDependencies": {
     "build-any": "workspace:^1.0.0",

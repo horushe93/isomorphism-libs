@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "author": "horushe",
-  "homepage": "https://github.com/horushe/build-any#readme",
+  "homepage": "https://github.com/horushe93/isomorphism-libs/tree/master/packages/build-any",
   "license": "MIT",
   "main": "./dist/index.node.cjs.cjs",
   "module": "./dist/index.node.esm.mjs",
@@ -44,10 +44,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/horushe/build-any.git"
+    "url": "git+https://github.com/horushe93/isomorphism-libs.git"
   },
   "bugs": {
-    "url": "https://github.com/horushe/build-any/issues"
+    "url": "https://github.com/horushe93/isomorphism-libs/issues"
   },
   "engines": {
     "node": ">=14"
