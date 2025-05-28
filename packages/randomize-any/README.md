@@ -212,18 +212,8 @@ Here are some websites and applications that use `randomize-any` in production:
 
 ---
 
-*Want to showcase your website here? [Open an issue](https://github.com/your-username/randomize-any/issues) or submit a pull request!*
+*Want to showcase your website here? [Open an issue](https://github.com/horushe93/isomorphism-libs/issues) or submit a pull request!*
 
 ## License
 
 MIT License
-
-## Keywords
-
-- randomize
-- random
-- randomization
-- cryptographically secure
-- weighted random
-- TypeScript
-
