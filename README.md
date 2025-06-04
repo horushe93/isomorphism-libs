@@ -164,8 +164,8 @@ Our libraries are used by the following projects:
 - **Flagle Explorer** - A flag wordle game using weighted randomization to select daily flags
 
 ### 🎯 Utilities & Tools
-- **Ruleta Aleatoria** - Simple web app helping users make random choices
-- **Random Wheel from 1 to 100** - Tool for randomly selecting numbers using secure randomization algorithms
+- **[Ruleta Aleatoria](https://ruletaa.net/)** - Simple web app helping users make random choices
+- **[Random Wheel from 1 to 100](https://ruletaa.net/en/numbers/1-100)** - Tool for randomly selecting numbers using secure randomization algorithms
 
 ## 🤝 Contributing
 
